@@ -1,0 +1,8 @@
+YaYa website notes:
+menu tabs:
+ - Home
+ - About
+ - Services
+ - Contact me
+ - Reviews
+ - Pricing?
