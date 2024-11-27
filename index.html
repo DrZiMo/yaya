@@ -4,13 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
+
+    <!-- fontsawsome -->
+    <script src="https://kit.fontawesome.com/f900e39f72.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/favicon/yaya-favicon-stroke.png">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>YaYa - portfolio</title>
 </head>
 
 <body>
+    <!-- Header -->
+    <div class="header w-full">
+        <div class="w-full xl:w-[1100px] mx-auto py-4 px-6 xl:px-0 flex justify-between items-center">
+            <img src="assets/light-mode-logo-cropped.png" alt="yaya-logo" width="100px" class="h-fit">
+            <div class="nav hidden"></div>
+            <div class="last-section text-3xl text-gray-500 flex gap-7">
+                <div class="mode-changer transition hover:text-orange cursor-pointer">
+                    <i class="fa-regular fa-sun"></i>
+                </div>
+                <div class="menu-bar transition hover:text-orange cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Hero Section -->
+    <div class="hero-section w-full xl:w-[1100px] mx-auto px-6 xl:px-0 h-[70vh] flex justify-between items-center mt-6">
+        <div class="left-part text-dark flex flex-col gap-3 w-1/2">
+            <div>
+                <div class="small-hello text-gray-500">—— <span class="font-edu_au">Hello</span></div>
+                <div class="main-hero-text font-pt_sans font-bold text-7xl">I'm <span class="text-orange">Yahye</span>
+                    Faysal
+                </div>
+            </div>
+            <div class="simple-description">A skilled photographer with a keen eye for detail, transforming everyday
+                moments into captivating visual stories. Specializing in creating timeless art through the lens</div>
+            <button
+                class="explore-pictures w-fit bg-orange text-white px-5 py-2 font-semibold flex items-center gap-3 transition hover:bg-[#e55b00]">Explore
+                <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="right-part h-full relative 2xl:flex 2xl:items-center">
+            <img src="assets/yaya-main.png" alt="yaya" class="h-full 2xl:h-[560px] grayscale">
+            <img src="assets/main-pic-bg-texture.png" alt="" class="absolute top-32 -z-10 scale-[1.5]">
+        </div>
+    </div>
 </body>
 
 </html>
