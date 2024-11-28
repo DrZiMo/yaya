@@ -1,16 +1,15 @@
 const themeToggle = document.querySelector('.mode-changer');
-const logo = document.querySelector('.logo')
+const logo = document.querySelector('.logo');
 const htmlElement = document.documentElement;
 
-let isDark = false;
+// Load saved theme preference
+const isDark = localStorage.getItem('theme') === 'dark';
+htmlElement.classList.toggle('dark', isDark);
+logo.src = isDark ? 'assets/dark-mode-logo-cropped.png' : 'assets/light-mode-logo-cropped.png';
 
+// Toggle theme and save preference
 themeToggle.addEventListener('click', () => {
-    isDark = !isDark;
-    htmlElement.classList.toggle('dark');
-
-    if (isDark) {
-        logo.src = 'assets/dark-mode-logo-cropped.png';
-    } else {
-        logo.src = 'assets/light-mode-logo-cropped.png'
-    }
+    const isDarkMode = htmlElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    logo.src = isDarkMode ? 'assets/dark-mode-logo-cropped.png' : 'assets/light-mode-logo-cropped.png';
 });
