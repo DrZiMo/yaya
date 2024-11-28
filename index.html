@@ -19,28 +19,32 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+
+    <script src="script.js" defer></script>
     <title>YaYa - portfolio</title>
 </head>
 
-<body>
+<body class="dark:bg-bg_dark_mode">
     <!-- Header -->
     <div class="header w-full">
         <div class="w-full xl:w-[1100px] mx-auto py-4 px-6 xl:px-0 flex justify-between items-center">
-            <img src="assets/light-mode-logo-cropped.png" alt="yaya-logo" width="100px" class="h-fit">
+            <img src="assets/light-mode-logo-cropped.png" alt="yaya-logo" width="100px" class="logo h-fit">
             <div class="nav hidden md:block w-1/2 lg:w-1/3">
                 <ul class="flex justify-between">
                     <li class="text-orange"><a href="">Home</a></li>
-                    <li class="cursor-pointer transition hover:text-orange"><a href="">About</a></li>
-                    <li class="cursor-pointer transition hover:text-orange"><a href="">Services</a></li>
-                    <li class="cursor-pointer transition hover:text-orange"><a href="">Gallery</a></li>
-                    <li class="cursor-pointer transition hover:text-orange"><a href="">Contact</a></li>
+                    <li class=" cursor-pointer transition hover:text-orange dark:text-white"><a href="">About</a></li>
+                    <li class="cursor-pointer transition hover:text-orange dark:text-white"><a href="">Services</a></li>
+                    <li class=" cursor-pointer transition hover:text-orange dark:text-white"><a href="">Gallery</a></li>
+                    <li class="cursor-pointer transition hover:text-orange dark:text-white"><a href="">Contact</a></li>
                 </ul>
             </div>
-            <div class="last-section text-3xl text-gray-500 flex gap-7">
-                <div class="mode-changer transition hover:text-orange cursor-pointer">
+            <div class=" last-section text-2xl text-gray-500 flex gap-7">
+                <div
+                    class="mode-changer transition hover:text-orange dark:hover:text-orange hover:rotate-12 cursor-pointer dark:text-white">
                     <i class="fa-regular fa-sun"></i>
                 </div>
-                <div class="menu-bar transition hover:text-orange cursor-pointer md:hidden">
+                <div
+                    class="menu-bar transition hover:text-orange dark:hover:text-orange cursor-pointer md:hidden dark:text-white">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
@@ -49,8 +53,8 @@
 
     <!-- Hero Section -->
     <div
-        class="hero-section w-full xl:w-[1100px] mx-auto px-6 xl:px-0 h-[100vh] md:h-[70vh] flex flex-col-reverse gap-10 md:gap-4 md:flex-row justify-between items-center mt-32 md:mt-6">
-        <div class="left-part text-dark flex flex-col gap-3 w-[80%] md:w-1/2">
+        class="hero-section w-full xl:w-[1100px] mx-auto px-6 xl:px-0 h-[100vh] md:h-[70vh] flex flex-col-reverse gap-10 md:gap-4 md:flex-row items-center justify-between mt-16 md:mt-6 border border-red-500">
+        <div class="left-part text-dark dark:text-white flex flex-col gap-3 w-[80%] md:w-1/2 h-full justify-center">
             <div>
                 <div class="small-hello text-gray-500 text-left">—— <span class="font-edu_au">Hello</span></div>
                 <div class="main-hero-text font-pt_sans font-bold text-7xl">I'm <span class="text-orange">Yahye</span>
@@ -97,9 +101,10 @@
                 </div>
             </div>
         </div>
-        <div class="right-part h-2/3 md:h-full relative 2xl:flex 2xl:items-center">
-            <img src="assets/yaya-main.png" alt="yaya" class="h-full 2xl:h-[560px] grayscale w-full">
-            <div class="custom-shape bg-orange w-80 h-80 absolute -z-10 top-1/2 -translate-y-[50%]"
+        <div class="right-part h-1/2 sm:h-[55%] md:h-full relative 2xl:flex 2xl:items-center">
+            <img src="assets/yaya-main.png" alt="yaya"
+                class="h-[290px] sm:h-full 2xl:h-[560px] grayscale mx-auto md:mx-0">
+            <div class="custom-shape bg-orange w-[200px] h-[200px] md:w-80 md:h-80 absolute -z-10 top-1/2 -translate-y-[50%] left-1/2 -translate-x-[50%] md:"
                 style="border-radius: 76% 24% 23% 77% / 45% 41% 59% 55%;">
             </div>
         </div>
