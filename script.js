@@ -30,5 +30,17 @@ const showTheMenuBar = () => {
     navBar.classList.toggle('hidden')
 }
 
+menuIcon.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the click from propagating to the document
+    showTheMenuBar();
+});
+
+// Hide the menu if the user clicks anywhere else
+document.addEventListener("click", (event) => {
+    // Check if the navBar is visible and the click is outside the navBar
+    if (!navBar.classList.contains('hidden') && !navBar.contains(event.target)) {
+        navBar.classList.add('hidden');
+    }
+});
+
 window.addEventListener("scroll", makeTheHeaderShadow);
-menuIcon.addEventListener("click", showTheMenuBar);
