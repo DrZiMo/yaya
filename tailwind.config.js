@@ -6,7 +6,8 @@ tailwind.config = {
             colors: {
                 orange: '#ff6500',
                 dark: '#373b48',
-                bg_dark_mode: '#202020'
+                bg_dark_mode: '#202020',
+                slight_dark: 'rgba(0, 0, 0, 0.2)'
             },
             fontFamily: {
                 pt_sans: ["PT Sans", "sans-serif"],
