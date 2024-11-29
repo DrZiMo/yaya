@@ -13,6 +13,13 @@ tailwind.config = {
             fontFamily: {
                 pt_sans: ["PT Sans", "sans-serif"],
                 edu_au: ["Edu AU VIC WA NT Pre", "cursive"]
+            },
+            scrollBehavior: {
+                smooth: 'smooth'
+            },
+            boxShadow: {
+                simple_light: 'rgba(0, 0, 0, 0.24) 0px 3px 8px;',
+                simple_dark: 'rgba(0, 0, 0, 0.4) 0px 3px 8px;'
             }
         }
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -26,16 +26,24 @@
 
 <body class="dark:bg-bg_dark_mode">
     <!-- Header -->
-    <div class="header w-full">
-        <div class="w-full xl:w-[1100px] mx-auto py-4 px-6 xl:px-0 flex justify-between items-center">
-            <img src="assets/light-mode-logo-cropped.png" alt="yaya-logo" class="logo h-7">
-            <div class="nav hidden md:block w-1/2 lg:w-1/3">
-                <ul class="flex justify-between">
+    <div class="header w-full sticky top-0 bg-white dark:bg-bg_dark_mode" style="z-index: 1000;">
+        <div class="w-full xl:w-[1100px] mx-auto py-4 px-6 xl:px-0 flex justify-between items-center relative">
+            <img src=" assets/light-mode-logo-cropped.png" alt="yaya-logo" class="logo h-7">
+            <div class="nav hidden md:block w-1/2 lg:w-1/3 absolute md:static right-0 top-[4.3rem] py-4 px-5 bg-white dark:bg-bg_dark_mode md:p-0 rounded-md shadow-simple_light dark:shadow-simple_dark md:shadow-none"
+                style="z-index: 10;">
+                <ul class="flex justify-between flex-col md:flex-row gap-4 md:gap-0">
                     <li class="text-orange"><a href="">Home</a></li>
-                    <li class=" cursor-pointer transition hover:text-orange dark:text-white"><a href="">About</a></li>
-                    <li class="cursor-pointer transition hover:text-orange dark:text-white"><a href="">Services</a></li>
-                    <li class=" cursor-pointer transition hover:text-orange dark:text-white"><a href="">Gallery</a></li>
-                    <li class="cursor-pointer transition hover:text-orange dark:text-white"><a href="">Contact</a></li>
+                    <li class=" cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
+                            href="#about-me">About</a></li>
+                    <li class="cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
+                            href="">Services</a>
+                    </li>
+                    <li class=" cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
+                            href="">Gallery</a>
+                    </li>
+                    <li class="cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
+                            href="">Contact</a>
+                    </li>
                 </ul>
             </div>
             <div class=" last-section text-2xl text-gray-500 flex gap-7">
@@ -111,45 +119,44 @@
             </div>
         </div>
     </div>
-
     <!-- Boxes part -->
     <div class="boxes-part mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 w-full xl:w-[1100px] mx-auto px-6 xl:px-0">
         <div
-            class="box bg-slight_dark py-5 flex flex-col justify-center items-center rounded-md gap-2 border border-dark dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-camera"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">200+</div>
-            <div class="box-description text-gray-400">Perfect Shots</div>
+            <div class="box-description text-gray-500">Perfect Shots</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 flex flex-col justify-center items-center rounded-md gap-2 border border-dark dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-handshake"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">50+</div>
-            <div class="box-description text-gray-400">Client Served</div>
+            <div class="box-description text-gray-500">Client Served</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 flex flex-col justify-center items-center rounded-md gap-2 border border-dark dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-face-laugh-beam"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">50+</div>
-            <div class="box-description text-gray-400">Happy Clients</div>
+            <div class="box-description text-gray-500">Happy Clients</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 flex flex-col justify-center items-center rounded-md gap-2 border border-dark dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-globe"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">30k+</div>
-            <div class="box-description text-gray-400">Social media Followers</div>
+            <div class="box-description text-gray-500">Social media Followers</div>
         </div>
     </div>
 
     <!-- About me -->
-    <div
+    <div id="about-me"
         class="about mt-16 flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-14 w-full md:w-[80%] xl:w-[1100px] mx-auto px-6 xl:px-0">
         <div class=" left-part w-2/3 md:w-[30%] relative">
             <img src="assets/yaya-about.jpg" alt="yaya about" class="rounded-md w-full h-72 md:h-auto object-cover">
