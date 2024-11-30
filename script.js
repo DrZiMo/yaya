@@ -7,6 +7,8 @@ const navBar = document.querySelector('.nav');
 const menuIcon = document.querySelector('.menu-bar');
 
 const navUlItem = navBar.querySelectorAll('ul li');
+const sections = document.querySelectorAll('#hero-section, #about-me, #services, #gallery, #contact');
+let lastActiveIndex = -1;
 
 // Load saved theme preference
 const isDark = localStorage.getItem('theme') === 'dark';
@@ -34,41 +36,53 @@ const makeTheHeaderShadow = () => {
         header.classList.remove("shadow-simple_light", "dark:shadow-simple_dark")
     }
 
-    // console.log(window.scrollY);
+    console.log(window.scrollY);
 
-    let currenActiveIndex = 0;
+    let currentActiveIndex = -1;
 
-    if (window.scrollY < 1166) {
-        currenActiveIndex = 0;
-    } else if (window.scrollY >= 1166 && window.scrollY < 1900) {
-        currenActiveIndex = 1;
-    } else if (window.scrollY >= 1900 && window.scrollY < 3018) {
-        currenActiveIndex = 2;
-    } else {
-        currenActiveIndex = 3;
-    }
+    // Calculate the current scroll position
+    const scrollPosition = window.scrollY + window.innerHeight / 3; // Allow for smoother activation point
 
-    navUlItem.forEach((item, index) => {
-        if (index === currenActiveIndex) {
-            item.classList.remove(
-                "cursor-pointer",
-                "transition",
-                "active:text-orange",
-                "md:hover:text-orange",
-                "dark:text-white"
-            );
-            item.classList.add("text-orange");
-        } else {
-            item.classList.remove("text-orange");
-            item.classList.add(
-                "cursor-pointer",
-                "transition",
-                "active:text-orange",
-                "md:hover:text-orange",
-                "dark:text-white"
-            );
+    // Loop through sections to determine which section is currently visible
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        // We need a buffer zone between sections. This ensures smooth transition between sections.
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentActiveIndex = index;
         }
     });
+
+    // If the active index has changed, update the active class on the nav links
+    if (currentActiveIndex !== lastActiveIndex) {
+        // Remove active classes from all nav links
+        navUlItem.forEach(link => {
+            link.classList.remove("text-orange");
+            link.classList.add(
+                "cursor-pointer",
+                "transition",
+                "active:text-orange",
+                "md:hover:text-orange",
+                "dark:text-white"
+            );
+        });
+
+        // Add the active class to the current active link
+        if (currentActiveIndex !== -1) {
+            navUlItem[currentActiveIndex].classList.remove(
+                "cursor-pointer",
+                "transition",
+                "active:text-orange",
+                "md:hover:text-orange",
+                "dark:text-white"
+            );
+            navUlItem[currentActiveIndex].classList.add("text-orange");
+        }
+
+        // Update the last active index to the new one
+        lastActiveIndex = currentActiveIndex;
+    }
 }
 
 const showTheMenuBar = () => {
