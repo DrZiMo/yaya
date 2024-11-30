@@ -183,7 +183,7 @@
             <div class="text-4xl md:text-5xl font-bold text-dark dark:text-white">Services</div>
             <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3 mx-auto"></div>
         </div>
-        <div class="boxes mt-10 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
+        <div class="boxes mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
             <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
                 <div
                     class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
@@ -232,9 +232,10 @@
                 <div class="info text-dark dark:text-gray-300">Capture every magical moment of your special day with
                     timeless and elegant photography.</div>
             </div>
-            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+            <!-- Hidden Ones -->
+            <div class="box hidden flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
                 <div
-                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full w-fit">
                     <i class="fa-solid fa-globe"></i>
                 </div>
                 <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Travel</span>
@@ -245,9 +246,9 @@
                     available for
                     purchase or custom projects.</div>
             </div>
-            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+            <div class="box hidden flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
                 <div
-                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full w-fit">
                     <i class="fa-solid fa-edit"></i>
                 </div>
                 <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Photo
@@ -257,9 +258,9 @@
                 <div class="info text-dark dark:text-gray-300">Professional retouching and editing to perfect your
                     photos and bring out their best.</div>
             </div>
-            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+            <div class="box hidden flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
                 <div
-                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full w-fit">
                     <i class="fa-solid fa-briefcase"></i>
                 </div>
                 <div class="title text-xl font-bold text-dark dark:text-white"><span
@@ -269,9 +270,9 @@
                 <div class="info text-dark dark:text-gray-300">Tailored photography for advertising campaigns,
                     promotional materials, and corporate branding.</div>
             </div>
-            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+            <div class="box hidden flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
                 <div
-                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full w-fit">
                     <i class="fa-solid fa-smile"></i>
                 </div>
                 <div class="title text-xl font-bold text-dark dark:text-white"><span
@@ -282,6 +283,8 @@
                     everyday moments or personal stories.</div>
             </div>
         </div>
+        <button class="show-more text-orange w-fit font-semibold hover:underline transition mt-2">Show
+            more</button>
     </div>
 </body>
 

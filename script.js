@@ -10,6 +10,10 @@ const navUlItem = navBar.querySelectorAll('ul li');
 const sections = document.querySelectorAll('#hero-section, #about-me, #services, #gallery, #contact');
 let lastActiveIndex = -1;
 
+const services = document.querySelectorAll(".services .boxes .box");
+const showBtn = document.querySelector(".show-more");
+let isShown = false;
+
 // Load saved theme preference
 const isDark = localStorage.getItem('theme') === 'dark';
 htmlElement.classList.toggle('dark', isDark);
@@ -104,5 +108,15 @@ const changeTheActiveNavItem = () => {
     // console.log(window.screenY)
 }
 
+const showMoreServices = () => {
+    isShown = !isShown;
+    for (let i = 4; i <= 7; i++) {
+        services[i].classList.toggle("hidden")
+    }
+
+    showBtn.textContent = isShown ? "Show less" : "Show more";
+}
+
 window.addEventListener("scroll", makeTheHeaderShadow);
 window.addEventListener("scroll", changeTheActiveNavItem);
+showBtn.addEventListener("click", showMoreServices);
