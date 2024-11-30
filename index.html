@@ -25,6 +25,7 @@
 </head>
 
 <body class="dark:bg-bg_dark_mode">
+
     <!-- Header -->
     <div class="header w-full sticky top-0 bg-white dark:bg-bg_dark_mode" style="z-index: 1000;">
         <div class="w-full xl:w-[1100px] mx-auto py-4 px-6 xl:px-0 flex justify-between items-center relative">
@@ -36,7 +37,7 @@
                     <li class=" cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
                             href="#about-me">About</a></li>
                     <li class="cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
-                            href="">Services</a>
+                            href="#services">Services</a>
                     </li>
                     <li class=" cursor-pointer transition active:text-orange md:hover:text-orange dark:text-white"><a
                             href="">Gallery</a>
@@ -123,36 +124,36 @@
     <!-- Boxes part -->
     <div class="boxes-part mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 w-full xl:w-[1100px] mx-auto px-6 xl:px-0">
         <div
-            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:border-gray-600 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-camera"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">200+</div>
-            <div class="box-description text-gray-500">Perfect Shots</div>
+            <div class="box-description text-gray-500 dark:text-gray-300">Perfect Shots</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:border-gray-600 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-handshake"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">50+</div>
-            <div class="box-description text-gray-500">Client Served</div>
+            <div class="box-description text-gray-500 dark:text-gray-300">Client Served</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:border-gray-600 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-face-laugh-beam"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">50+</div>
-            <div class="box-description text-gray-500">Happy Clients</div>
+            <div class="box-description text-gray-500 dark:text-gray-300">Happy Clients</div>
         </div>
         <div
-            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:bg-slight_light">
+            class="box bg-slight_dark py-5 text-center flex flex-col justify-center items-center rounded-md gap-2 border border-gray-400 dark:border-gray-600 dark:bg-slight_light">
             <div class="icon text-orange text-4xl">
                 <i class="fa-solid fa-globe"></i>
             </div>
             <div class="number font-bold text-3xl dark:text-white">30k+</div>
-            <div class="box-description text-gray-500">Social media Followers</div>
+            <div class="box-description text-gray-500 dark:text-gray-300">Social media Followers</div>
         </div>
     </div>
 
@@ -164,9 +165,9 @@
             <div class="about-texture w-10 h-10 bg-orange absolute rounded-sm -top-3 -right-5 -z-10"></div>
         </div>
         <div class="right-part md:w-1/2">
-            <div class="title">
+            <div class="title text-center md:text-left">
                 <div class="text-4xl md:text-5xl font-bold text-dark dark:text-white">About me</div>
-                <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3"></div>
+                <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3 mx-auto md:mx-0"></div>
             </div>
             <div class="info text-dark dark:text-gray-400">
                 Hi, I’m <span class="font-semibold text-orange">Yahye Faysal</span>, a passionate photographer dedicated
@@ -182,6 +183,113 @@
 
                 Whether it’s preserving life’s big milestones or crafting the perfect shot, I’m here to bring your
                 vision to life with professionalism and a personal touch. Let’s create something extraordinary together!
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="services w-full xl:w-[1100px] mx-auto px-6 xl:px-0 mt-20">
+        <div class="title text-center">
+            <div class="text-4xl md:text-5xl font-bold text-dark dark:text-white">Services</div>
+            <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3 mx-auto"></div>
+        </div>
+        <div class="boxes mt-10 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Event</span>
+                    Photography</div>
+                <div class="info text-dark dark:text-gray-300">Capture the essence of your special events with
+                    professional and candid
+                    photos,
+                    preserving memories to last a lifetime.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Portrait</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">Personal or professional portraits tailored to showcase
+                    your unique
+                    personality or
+                    brand image.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Product</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">High-quality visuals that highlight your products,
+                    perfect for e-commerce,
+                    advertising, and catalogs.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Wedding</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">Capture every magical moment of your special day with
+                    timeless and elegant photography.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Travel</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">Adventure-inspired photos that bring destinations to
+                    life,
+                    available for
+                    purchase or custom projects.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-edit"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span class="text-orange">Photo
+                        Editing</span>
+                    Services
+                </div>
+                <div class="info text-dark dark:text-gray-300">Professional retouching and editing to perfect your
+                    photos and bring out their best.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span
+                        class="text-orange">Commercial</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">Tailored photography for advertising campaigns,
+                    promotional materials, and corporate branding.</div>
+            </div>
+            <div class="box flex flex-col gap-3 bg-slight_dark dark:bg-slight_light p-4 rounded-md py-8">
+                <div
+                    class="icon text-orange text-3xl mx-auto bg-slight_dark dark:bg-slight_light px-4 py-3 rounded-full">
+                    <i class="fa-solid fa-smile"></i>
+                </div>
+                <div class="title text-xl font-bold text-dark dark:text-white"><span
+                        class="text-orange">Lifestyle</span>
+                    Photography
+                </div>
+                <div class="info text-dark dark:text-gray-300">Natural and candid photography to authentically capture
+                    everyday moments or personal stories.</div>
             </div>
         </div>
     </div>
