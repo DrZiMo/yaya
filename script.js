@@ -6,6 +6,8 @@ const htmlElement = document.documentElement;
 const navBar = document.querySelector('.nav');
 const menuIcon = document.querySelector('.menu-bar');
 
+const navUlItem = navBar.querySelectorAll('ul li');
+
 // Load saved theme preference
 const isDark = localStorage.getItem('theme') === 'dark';
 htmlElement.classList.toggle('dark', isDark);
@@ -31,6 +33,42 @@ const makeTheHeaderShadow = () => {
     } else {
         header.classList.remove("shadow-simple_light", "dark:shadow-simple_dark")
     }
+
+    // console.log(window.scrollY);
+
+    let currenActiveIndex = 0;
+
+    if (window.scrollY < 1166) {
+        currenActiveIndex = 0;
+    } else if (window.scrollY >= 1166 && window.scrollY < 1900) {
+        currenActiveIndex = 1;
+    } else if (window.scrollY >= 1900 && window.scrollY < 3018) {
+        currenActiveIndex = 2;
+    } else {
+        currenActiveIndex = 3;
+    }
+
+    navUlItem.forEach((item, index) => {
+        if (index === currenActiveIndex) {
+            item.classList.remove(
+                "cursor-pointer",
+                "transition",
+                "active:text-orange",
+                "md:hover:text-orange",
+                "dark:text-white"
+            );
+            item.classList.add("text-orange");
+        } else {
+            item.classList.remove("text-orange");
+            item.classList.add(
+                "cursor-pointer",
+                "transition",
+                "active:text-orange",
+                "md:hover:text-orange",
+                "dark:text-white"
+            );
+        }
+    });
 }
 
 const showTheMenuBar = () => {
@@ -48,4 +86,9 @@ document.addEventListener("click", (event) => {
     }
 });
 
+const changeTheActiveNavItem = () => {
+    // console.log(window.screenY)
+}
+
 window.addEventListener("scroll", makeTheHeaderShadow);
+window.addEventListener("scroll", changeTheActiveNavItem);
