@@ -118,10 +118,11 @@ const loadTheImages = () => {
 
     for (let i = 1; i <= numberOfImages; i++) {
         const card = document.createElement("li");
-        card.classList.add("card");
+        card.classList.add("card", "mb-[14px]", "rounded-[4px]");
         imagesContainer.append(card);
 
         const cardImage = document.createElement("img");
+        cardImage.classList.add("w-full", "rounded-inherit")
         cardImage.src = `assets/Gallery/image ${i}.jpg`;
         cardImage.alt = `Image number ${i}`;
         cardImage.loading = "lazy";
