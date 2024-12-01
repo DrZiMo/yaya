@@ -84,7 +84,6 @@ const makeTheHeaderShadow = () => {
             navUlItem[currentActiveIndex].classList.add("text-orange");
         }
 
-        // Update the last active index to the new one
         lastActiveIndex = currentActiveIndex;
     }
 }
@@ -104,10 +103,6 @@ document.addEventListener("click", (event) => {
     }
 });
 
-const changeTheActiveNavItem = () => {
-    // console.log(window.screenY)
-}
-
 const showMoreServices = () => {
     isShown = !isShown;
     for (let i = 4; i <= 7; i++) {
@@ -117,6 +112,48 @@ const showMoreServices = () => {
     showBtn.textContent = isShown ? "Show less" : "Show more";
 }
 
+const viewMore = document.querySelector(".view-more")
+
+const loadTheImages = () => {
+    const imagesContainer = document.querySelector(".images");
+    const numberOfImages = 29;
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const card = document.createElement("li");
+        card.classList.add("card");
+        imagesContainer.append(card);
+
+        const cardImage = document.createElement("img");
+        cardImage.src = `assets/Gallery/image ${i}.jpg`;
+        cardImage.alt = `Image number ${i}`;
+        cardImage.loading = "lazy";
+        card.append(cardImage);
+
+        if (i > 8) {
+            card.classList.add("hidden");
+        }
+    }
+}
+
+const showAllImages = () => {
+    const hiddenCards = document.querySelectorAll(".card.hidden");
+
+    if (hiddenCards.length > 0) {
+        hiddenCards.forEach(card => card.classList.remove("hidden"));
+        viewMore.textContent = "View Less";
+    } else {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card, index) => {
+            if (index >= 8) {
+                card.classList.add("hidden");
+            }
+        });
+        viewMore.textContent = "View More"; // Change button text back to "View More"
+    }
+}
+
 window.addEventListener("scroll", makeTheHeaderShadow);
 window.addEventListener("scroll", changeTheActiveNavItem);
 showBtn.addEventListener("click", showMoreServices);
+window.addEventListener("load", loadTheImages);
+viewMore.addEventListener("click", showAllImages)

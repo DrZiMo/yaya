@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="styles.css">
+
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
@@ -308,16 +310,12 @@
             <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3 mx-auto"></div>
         </div>
         <div class="gallery-container w-full bg-slight_dark dark:bg-slight_light py-5 px-6 rounded-md">
-            <div class="filter w-full flex justify-end gap-5 text-dark">
-                <div class="all px-3 py-1 bg-orange text-white rounded-full">All</div>
-                <div
-                    class="photoes px-3 py-1 border border-orange rounded-full dark:text-white cursor-pointer transition hover:bg-orange hover:text-white">
-                    Photoes
-                </div>
-                <div
-                    class="videos px-3 py-1 border border-orange rounded-full dark:text-white cursor-pointer transition hover:bg-orange hover:text-white">
-                    Videos
-                </div>
+
+            <ul class="images columns-5 columns-[240px] md:columns-[340px]">
+            </ul>
+            <div class="flex justify-end">
+                <button class="view-more text-orange w-fit font-semibold hover:underline transition mt-2">View
+                    more</button>
             </div>
         </div>
     </div>

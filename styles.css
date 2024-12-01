@@ -1,0 +1,14 @@
+.images {
+    margin-top: 40px;
+    gap: 15px;
+}
+
+.images .card {
+    margin-bottom: 14px;
+    border-radius: 4px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: inherit;
+}
