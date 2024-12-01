@@ -40,8 +40,6 @@ const makeTheHeaderShadow = () => {
         header.classList.remove("shadow-simple_light", "dark:shadow-simple_dark")
     }
 
-    console.log(window.scrollY);
-
     let currentActiveIndex = -1;
 
     // Calculate the current scroll position
