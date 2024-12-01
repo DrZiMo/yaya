@@ -148,12 +148,11 @@ const showAllImages = () => {
                 card.classList.add("hidden");
             }
         });
-        viewMore.textContent = "View More"; // Change button text back to "View More"
+        viewMore.textContent = "View More";
     }
 }
 
 window.addEventListener("scroll", makeTheHeaderShadow);
-window.addEventListener("scroll", changeTheActiveNavItem);
 showBtn.addEventListener("click", showMoreServices);
 window.addEventListener("load", loadTheImages);
 viewMore.addEventListener("click", showAllImages)
