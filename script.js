@@ -151,6 +151,14 @@ const showAllImages = () => {
     }
 }
 
+document.querySelector('.to-up').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
 window.addEventListener("scroll", makeTheHeaderShadow);
 showBtn.addEventListener("click", showMoreServices);
 window.addEventListener("load", loadTheImages);

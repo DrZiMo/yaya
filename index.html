@@ -322,7 +322,7 @@
 
     <!-- Contact -->
     <div id="contact" class="w-full xl:w-[1100px] mx-auto px-6 xl:px-0 mt-20">
-        <div class="title text-center mb-6 md:mb-16">
+        <div class="title text-center mb-6s  md:mb-16">
             <div class="text-4xl md:text-5xl font-bold text-dark dark:text-white">Contact</div>
             <div class="underline-line w-20 md:w-28 h-[4px] bg-orange rounded-md mt-1 mb-3 mx-auto"></div>
         </div>
@@ -402,9 +402,55 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-red-500 px-6 xl:px-0 mt-20">
+    <div class="to-up w-full xl:w-[1100px] mx-auto px-6 xl:px-0 mt-20 flex justify-end">
+        <div class="bg-orange text-white px-4 py-2 rounded-md text-xl hover:-translate-y-2 transition cursor-pointer">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+    </div>
 
+    <!-- Footer -->
+    <footer class="w-full bg-footer_light dark:bg-footer_dark pt-20 mt-2 relative overflow-x-hidden">
+        <div class="px-6 xl:px-0">
+            <div class="absolute top-0 w-full h-[2px] bg-gradient-to-r from-transparent to-orange"></div>
+            <div
+                class="w-full xl:w-[1100px] mx-auto px-6 xl:px-0 flex flex-col md:flex-row gap-6 md:gap-0 justify-between">
+                <div class="left-part w-2/3 md:w-1/4">
+                    <img src="assets/light-mode-logo-cropped.png" alt="yaya logo"
+                        class="footer-img w-[110px] md:w-[120px] bg-slight_dark dark:bg-slight_light px-5 py-3 rounded-md"
+                        loading="lazy">
+                    <div class="small-description mt-4 text-dark dark:text-gray-300">
+                        Dedicated to capturing the beauty in every moment and turning them into lasting memories.
+                    </div>
+                </div>
+                <div class="right-part w-full md:w-1/2 flex justify-between md:justify-around">
+                    <div class="column text-dark dark:text-gray-300">
+                        <div class="col-title text-lg font-bold">Pages</div>
+                        <ul>
+                            <li><a href="#hero-section">Home</a></li>
+                            <li><a href="#about-me">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="column text-dark dark:text-gray-300">
+                        <div class="col-title text-lg font-bold">Services</div>
+                        <ul>
+                            <li>Event photography</li>
+                            <li>Portrait photography</li>
+                            <li>Product photography</li>
+                            <li>Wedding photography</li>
+                            <li><a href="#services" class="text-orange underline mt-2">show more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer bg-slight_dark dark:bg-sub_footer_dark py-3 mt-10 flex justify-center">
+            <div class="font-semibold text-dark dark:text-gray-400">
+                © 2024 YaYa. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
 

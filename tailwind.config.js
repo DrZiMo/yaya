@@ -8,7 +8,10 @@ tailwind.config = {
                 dark: '#373b48',
                 bg_dark_mode: '#202020',
                 slight_dark: 'rgba(0, 0, 0, 0.1)',
-                slight_light: 'rgba(255, 255, 255, 0.1)'
+                slight_light: 'rgba(255, 255, 255, 0.1)',
+                footer_dark: 'rgba(0, 0, 0, 0.3)',
+                sub_footer_dark: 'rgba(0, 0, 0, 0.4)',
+                footer_light: 'rgba(0, 0, 0, 0.15)',
             },
             fontFamily: {
                 pt_sans: ["PT Sans", "sans-serif"],
